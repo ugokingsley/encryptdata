@@ -25,6 +25,7 @@ SECRET_KEY = 'h-4^44m!6=hk&6g(2np57)-i80_p$4ws!o_8&ajvo7le9nao2r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = ['encryptdata.herokuapp.com','localhost']
 # Application definition
 
 INSTALLED_APPS = [
