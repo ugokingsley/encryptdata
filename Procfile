@@ -1,1 +1,1 @@
-web: gunicorn gsmfilter.wsgi --log-file -
+web: gunicorn encryptproject.wsgi --log-file -
