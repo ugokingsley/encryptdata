@@ -1,0 +1,79 @@
+{% load staticfiles %}
+{% load pwa %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+{% progressive_web_app_meta %}   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="" />
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/daetacity/image/upload/v1528330239/myfarm/log.png">
+    <meta name="description" content="Nanotrixedu">
+<meta name="keywords" content="">
+<meta name="author" content="">
+        
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel='shortcut icon' type='image/x-icon' href='https://res.cloudinary.com/daetacity/image/upload/v1528330239/myfarm/lgo.png' />
+
+    <title>{% block head_title %}Email Filter{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+
+
+
+  
+  
+   <!-- <script src="https://use.fontawesome.com/07f3257ff1.js"></script>-->
+   <script src="https://use.fontawesome.com/2af581e539.js"></script>
+
+<style>
+    body{
+      font-family: open sans,sans-serif !important;
+    }
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+   {% block style %}
+    {% endblock %}
+</style>
+
+</head>
+  <body>
+
+
+
+   
+
+{% block jumbotron %}
+
+    {% endblock %}
+
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+</div> <!-- /container -->
+
+
+ 
+
+
+  {% include 'javascript.html' %}
+  </body>
+
+
+</html>
