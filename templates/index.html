@@ -55,8 +55,8 @@
               <form class=" wthree-subsribe" action="" method="POST" style="margin: 2em !important;">
             {% csrf_token %}
 
-                {{ form | crispy }}
-
+                  <textarea name="text" maxlength="256" style="" class="textinput textInput form-control" required="" id="id_text"></textarea>
+                <br>
                 <input type="submit" class="btn btn-primary btn-block" value="Submit">
             </form>
 
