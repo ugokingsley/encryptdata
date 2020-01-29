@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+
+ <style type="text/css">
+   #overlay{
+    background-color: rgba(0,0,0,.31);
+   }
+ </style>
+
+
+<main>
+  <div class="container">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-9 mb-4">
+            <!-- Title -->
+              <h4 class="card-title">Encrypted Data</h4>
+           {% for data in list1 %}
+            <div class="card-body">
+                <h5>{{ data.text }}</h5>
+            </div>
+            {% endfor %}
+          </div>
+
+      </div>
+
+    </section>
+    </div>
+
+<br>
+
+</main>
+{% endblock %}

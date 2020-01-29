@@ -20,4 +20,6 @@ from encryptapp.views import *
 urlpatterns = [
    path('admin/', admin.site.urls),
    path('', index, name='index'),
+   path('encrypted/', list_data, name='list_data'),
+   path('decrypted/', original_data, name='original_data'),
 ]

@@ -34,3 +34,20 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+
+def list_data(request):
+    list1 = EncryptData.objects.all().order_by('-id')
+    context = {
+        "list1": list1,
+    }
+    return render(request, 'list_data.html', context)
+
+
+def original_data(request):
+    list1 = EncryptData.objects.all().order_by('-id')
+    context = {
+        "list1": list1,
+    }
+    return render(request, 'original.html', context)
+
+
