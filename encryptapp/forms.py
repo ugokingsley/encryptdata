@@ -13,7 +13,7 @@ from django.contrib.auth import get_user_model
 class EncryptDataForm(forms.ModelForm):
    class Meta:
         model=EncryptData
-        fields=['text']
+        fields=['encrypted']
 
 
 

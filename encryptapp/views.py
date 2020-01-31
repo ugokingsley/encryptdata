@@ -16,12 +16,12 @@ def index(request):
         form = EncryptDataForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
-            text = form.cleaned_data.get("text")
+            encrypted = form.cleaned_data.get("encrypted")
             try:
-                if EncryptData.objects.filter(text=text).count() > 0:
+                if EncryptData.objects.filter(encrypted=encrypted).count() > 0:
                     messages.success(request, 'This content already exist, Please try again')
                 else:
-                    instance.text = text
+                    instance.encrypted = encrypted
                     instance.pub_date = datetime.datetime.now()
                     instance.save()
                 messages.success(request, 'Success !!, Thanks for Submiting')
@@ -30,7 +30,6 @@ def index(request):
             return redirect(reverse('index'))
     context = {
         "form": form,
-        # "email":email,
     }
     return render(request, 'index.html', context)
 
@@ -40,7 +39,7 @@ def list_data(request):
     context = {
         "list1": list1,
     }
-    return render(request, 'list_data.html', context)
+    return render(request, 'encrypted.html', context)
 
 
 def original_data(request):
@@ -48,6 +47,6 @@ def original_data(request):
     context = {
         "list1": list1,
     }
-    return render(request, 'original.html', context)
+    return render(request, 'decrypted.html', context)
 
 

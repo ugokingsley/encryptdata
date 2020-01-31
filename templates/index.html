@@ -15,9 +15,6 @@
 
 
 
-
-
-
 {% if messages %}
 
     <div class="callout callout-info">
@@ -55,7 +52,7 @@
               <form class=" wthree-subsribe" action="" method="POST" style="margin: 2em !important;">
             {% csrf_token %}
 
-                  <textarea name="text" maxlength="256" style="" class="textinput textInput form-control" required="" id="id_text"></textarea>
+                  <textarea name="encrypted" maxlength="256" style="" class="textinput textInput form-control" required="" id="id_encrypted"></textarea>
                 <br>
                 <input type="submit" class="btn btn-primary btn-block" value="Submit">
             </form>
